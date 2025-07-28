@@ -21,6 +21,19 @@ int main(){
 
     vector_pop_back(&vec); // there will be 8 left
 
+    vector_pop_front(&vec); // there will be 7 left
+
+    vector_pop_at(&vec, 2); // there will be 6 left 
+
+    //vector_pop_at(&vec, 7);
+
+    //vector_push_front(&vec, &(int){5});
+
+    vector_push_at(&vec, 5, &(int){0});
+
+    vector_reverse(&vec);
+
+
     for (size_t i = 0; i < vector_size(&vec); ++i){
         int* val = (int*)vector_at(&vec, i);
         printf("vec[%zu] = %d\n", i, *val);

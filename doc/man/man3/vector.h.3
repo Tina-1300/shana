@@ -56,6 +56,26 @@ vector.h
 .RI "bool \fBvector_pop_back\fP (\fBvector_t\fP *vec)"
 .br
 .RI "Removes the last element from the vector\&. "
+.ti -1c
+.RI "bool \fBvector_pop_front\fP (\fBvector_t\fP *vec)"
+.br
+.RI "Removes the first element from the vector\&. "
+.ti -1c
+.RI "bool \fBvector_pop_at\fP (\fBvector_t\fP *vec, size_t index)"
+.br
+.RI "Removes an element from the vector at a specified index\&. "
+.ti -1c
+.RI "bool \fBvector_push_front\fP (\fBvector_t\fP *vec, const void *element)"
+.br
+.RI "Adds an element to the very first index of the vector\&. "
+.ti -1c
+.RI "bool \fBvector_push_at\fP (\fBvector_t\fP *vec, size_t index, const void *element)"
+.br
+.RI "Adds an element to the vector at the specified index\&. "
+.ti -1c
+.RI "bool \fBvector_reverse\fP (\fBvector_t\fP *vec)"
+.br
+.RI "Reverse the elements of the vector\&. "
 .in -1c
 .SH "Function Documentation"
 .PP 
@@ -175,6 +195,25 @@ Returns true if the vector is empty\&.
 .RE
 .PP
 
+.SS "bool vector_pop_at (\fBvector_t\fP * vec, size_t index)"
+
+.PP
+Removes an element from the vector at a specified index\&. This function removes the element located at the given index within the vector\&. All elements following the removed index are shifted one position towards the beginning of the vector\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the initialized \fBvector_t\fP structure\&. 
+.br
+\fIindex\fP Index of the element to be removed\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns \fRtrue\fP if the operation was successful, \fRfalse\fP if the vector is NULL, uninitialized, empty, or if the index is out of bounds\&. 
+.RE
+.PP
+
 .SS "bool vector_pop_back (\fBvector_t\fP * vec)"
 
 .PP
@@ -188,6 +227,42 @@ Removes the last element from the vector\&.
 \fBReturns\fP
 .RS 4
 Returns true if everything went smoothly\&. 
+.RE
+.PP
+
+.SS "bool vector_pop_front (\fBvector_t\fP * vec)"
+
+.PP
+Removes the first element from the vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the initialized \fBvector_t\fP structure\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns true if everything went smoothly\&. 
+.RE
+.PP
+
+.SS "bool vector_push_at (\fBvector_t\fP * vec, size_t index, const void * element)"
+
+.PP
+Adds an element to the vector at the specified index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the initialized \fBvector_t\fP structure\&. 
+.br
+\fIindex\fP Index where the new element should be inserted\&. 
+.br
+\fIelement\fP Constant void pointer to the element to be added\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns \fRtrue\fP if the operation was successful, \fRfalse\fP if the vector is NULL, uninitialized, or if the index is out of bounds\&. 
 .RE
 .PP
 
@@ -206,6 +281,40 @@ Inserts an element at the end of the vector\&.
 \fBReturns\fP
 .RS 4
 Returns true if everything went smoothly\&. 
+.RE
+.PP
+
+.SS "bool vector_push_front (\fBvector_t\fP * vec, const void * element)"
+
+.PP
+Adds an element to the very first index of the vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the initialized \fBvector_t\fP structure\&. 
+.br
+\fIelement\fP Constant void pointer to the element to be added\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns \fRtrue\fP if the operation was successful, \fRfalse\fP if the vector is NULL or uninitialized\&. 
+.RE
+.PP
+
+.SS "bool vector_reverse (\fBvector_t\fP * vec)"
+
+.PP
+Reverse the elements of the vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the initialized \fBvector_t\fP structure\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns \fRtrue\fP if the operation was successful, \fRfalse\fP is the vector is NULL or uninitialized\&. 
 .RE
 .PP
 

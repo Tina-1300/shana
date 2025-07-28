@@ -105,33 +105,81 @@ bool vector_is_empty(const vector_t* vec);
 bool vector_pop_back(vector_t* vec);
 
 
-#endif
+/**
+    @brief Removes the first element from the vector.
 
+    @param[in] vec Pointer to the initialized vector_t structure.
+    @return Returns true if everything went smoothly.
+*/
+bool vector_pop_front(vector_t* vec);
+
+
+/**
+    @brief Removes an element from the vector at a specified index.
+
+    This function removes the element located at the given index within the vector.
+    All elements following the removed index are shifted one position towards the beginning of the vector.
+
+    @param[in] vec Pointer to the initialized vector_t structure.
+    @param[in] index Index of the element to be removed.
+
+    @return Returns \c true if the operation was successful,
+    \c false if the vector is NULL, uninitialized, empty, or if the index is out of bounds.
+*/
+bool vector_pop_at(vector_t* vec, size_t index);
+
+
+
+/**
+    @brief Adds an element to the very first index of the vector.
+
+    @param[in] vec Pointer to the initialized vector_t structure.
+    @param[in] element Constant void pointer to the element to be added.
+
+    @return Returns \c true if the operation was successful,
+    \c false if the vector is NULL or uninitialized.
+*/
+bool vector_push_front(vector_t* vec, const void* element);
+
+/**
+    @brief Adds an element to the vector at the specified index.
+
+    @param[in] vec Pointer to the initialized vector_t structure.
+    @param[in] index Index where the new element should be inserted.
+    @param[in] element Constant void pointer to the element to be added.
+
+    @return Returns \c true if the operation was successful,
+    \c false if the vector is NULL, uninitialized, or if the index is out of bounds.
+*/
+bool vector_push_at(vector_t* vec, size_t index, const void* element);
+
+
+/**
+    @brief Reverse the elements of the vector
+
+    @param[in] vec Pointer to the initialized vector_t structure.
+    
+    @return Returns \c true if the operation was successful,
+    \c false is the vector is NULL or uninitialized.
+*/
+bool vector_reverse(vector_t* vec);
+
+
+
+#endif
 
 /*
 
 methods (functions) to do:
 
-vector_push_at() -> inserts an element at a given index
 
-vector_pop_at() -> removes an element at a given index
-
-vector_pop_front() -> removes the first element
+vector_reverse_at() -> reverses elements of a vector from a given index
 
 vector_check() -> checks if an element already exists in the vector
 
-vector_count() -> counts how many times an element appears in the vector
-
 vector_clear_data() -> resets all vector values without freeing memory
 
-vector_reverse() -> reverses the content of the array
+vector_count() -> counts how many times an element appears in the vector
 
-vector_print() -> prints the vector values from index a to index b
-
-vector_print_all() -> prints all values of a vector
-
-vector_push_front() -> inserts an element at the front of the vector
-
-vector_reverse_at() -> reverses elements of a vector from a given index
 
 */

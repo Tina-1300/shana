@@ -106,6 +106,16 @@ Functions</h2></td></tr>
 <tr class="memdesc:a72fa045d84957b3b56aba5f5f4db0aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the vector is empty.  <br /></td></tr>
 <tr class="memitem:a3eef04a753e6a4bf2e9c0f07dfa7eaa3" id="r_a3eef04a753e6a4bf2e9c0f07dfa7eaa3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eef04a753e6a4bf2e9c0f07dfa7eaa3">vector_pop_back</a> (<a class="el" href="structvector__t.html">vector_t</a> *vec)</td></tr>
 <tr class="memdesc:a3eef04a753e6a4bf2e9c0f07dfa7eaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the last element from the vector.  <br /></td></tr>
+<tr class="memitem:afe4f0ef35f33a5c49ed114481d2f49cb" id="r_afe4f0ef35f33a5c49ed114481d2f49cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe4f0ef35f33a5c49ed114481d2f49cb">vector_pop_front</a> (<a class="el" href="structvector__t.html">vector_t</a> *vec)</td></tr>
+<tr class="memdesc:afe4f0ef35f33a5c49ed114481d2f49cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the first element from the vector.  <br /></td></tr>
+<tr class="memitem:a0831df596ce289ab3a8599f4a53dfde8" id="r_a0831df596ce289ab3a8599f4a53dfde8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0831df596ce289ab3a8599f4a53dfde8">vector_pop_at</a> (<a class="el" href="structvector__t.html">vector_t</a> *vec, size_t index)</td></tr>
+<tr class="memdesc:a0831df596ce289ab3a8599f4a53dfde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an element from the vector at a specified index.  <br /></td></tr>
+<tr class="memitem:a6fee9be3ad90b1a2b7390efca04013b5" id="r_a6fee9be3ad90b1a2b7390efca04013b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fee9be3ad90b1a2b7390efca04013b5">vector_push_front</a> (<a class="el" href="structvector__t.html">vector_t</a> *vec, const void *element)</td></tr>
+<tr class="memdesc:a6fee9be3ad90b1a2b7390efca04013b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an element to the very first index of the vector.  <br /></td></tr>
+<tr class="memitem:ac30b61dd9dd73b7d78fad70f7fd72823" id="r_ac30b61dd9dd73b7d78fad70f7fd72823"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac30b61dd9dd73b7d78fad70f7fd72823">vector_push_at</a> (<a class="el" href="structvector__t.html">vector_t</a> *vec, size_t index, const void *element)</td></tr>
+<tr class="memdesc:ac30b61dd9dd73b7d78fad70f7fd72823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an element to the vector at the specified index.  <br /></td></tr>
+<tr class="memitem:a4ae9029cf071ecd620bae9d40a9209b7" id="r_a4ae9029cf071ecd620bae9d40a9209b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ae9029cf071ecd620bae9d40a9209b7">vector_reverse</a> (<a class="el" href="structvector__t.html">vector_t</a> *vec)</td></tr>
+<tr class="memdesc:a4ae9029cf071ecd620bae9d40a9209b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the elements of the vector.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="aed45a36bf7685c643427e9a0a27c9828" name="aed45a36bf7685c643427e9a0a27c9828"></a>
@@ -300,6 +310,38 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0831df596ce289ab3a8599f4a53dfde8" name="a0831df596ce289ab3a8599f4a53dfde8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0831df596ce289ab3a8599f4a53dfde8">&#9670;&#160;</a></span>vector_pop_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vector_pop_at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvector__t.html">vector_t</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes an element from the vector at a specified index. </p>
+<p>This function removes the element located at the given index within the vector. All elements following the removed index are shifted one position towards the beginning of the vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec</td><td>Pointer to the initialized <a class="el" href="structvector__t.html">vector_t</a> structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>Index of the element to be removed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <code>true</code> if the operation was successful, <code>false</code> if the vector is NULL, uninitialized, empty, or if the index is out of bounds. </dd></dl>
+
+</div>
+</div>
 <a id="a3eef04a753e6a4bf2e9c0f07dfa7eaa3" name="a3eef04a753e6a4bf2e9c0f07dfa7eaa3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3eef04a753e6a4bf2e9c0f07dfa7eaa3">&#9670;&#160;</a></span>vector_pop_back()</h2>
 
@@ -323,6 +365,69 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if everything went smoothly. </dd></dl>
+
+</div>
+</div>
+<a id="afe4f0ef35f33a5c49ed114481d2f49cb" name="afe4f0ef35f33a5c49ed114481d2f49cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4f0ef35f33a5c49ed114481d2f49cb">&#9670;&#160;</a></span>vector_pop_front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vector_pop_front </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvector__t.html">vector_t</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the first element from the vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec</td><td>Pointer to the initialized <a class="el" href="structvector__t.html">vector_t</a> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if everything went smoothly. </dd></dl>
+
+</div>
+</div>
+<a id="ac30b61dd9dd73b7d78fad70f7fd72823" name="ac30b61dd9dd73b7d78fad70f7fd72823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30b61dd9dd73b7d78fad70f7fd72823">&#9670;&#160;</a></span>vector_push_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vector_push_at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvector__t.html">vector_t</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>element</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an element to the vector at the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec</td><td>Pointer to the initialized <a class="el" href="structvector__t.html">vector_t</a> structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>Index where the new element should be inserted. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>Constant void pointer to the element to be added.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <code>true</code> if the operation was successful, <code>false</code> if the vector is NULL, uninitialized, or if the index is out of bounds. </dd></dl>
 
 </div>
 </div>
@@ -354,6 +459,63 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if everything went smoothly. </dd></dl>
+
+</div>
+</div>
+<a id="a6fee9be3ad90b1a2b7390efca04013b5" name="a6fee9be3ad90b1a2b7390efca04013b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fee9be3ad90b1a2b7390efca04013b5">&#9670;&#160;</a></span>vector_push_front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vector_push_front </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvector__t.html">vector_t</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>element</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an element to the very first index of the vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec</td><td>Pointer to the initialized <a class="el" href="structvector__t.html">vector_t</a> structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>Constant void pointer to the element to be added.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <code>true</code> if the operation was successful, <code>false</code> if the vector is NULL or uninitialized. </dd></dl>
+
+</div>
+</div>
+<a id="a4ae9029cf071ecd620bae9d40a9209b7" name="a4ae9029cf071ecd620bae9d40a9209b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae9029cf071ecd620bae9d40a9209b7">&#9670;&#160;</a></span>vector_reverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vector_reverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvector__t.html">vector_t</a> *</td>          <td class="paramname"><span class="paramname"><em>vec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reverse the elements of the vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec</td><td>Pointer to the initialized <a class="el" href="structvector__t.html">vector_t</a> structure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <code>true</code> if the operation was successful, <code>false</code> is the vector is NULL or uninitialized. </dd></dl>
 
 </div>
 </div>

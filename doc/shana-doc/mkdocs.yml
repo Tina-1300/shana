@@ -1,0 +1,42 @@
+site_name: Shana
+
+theme:
+    name: material
+    palette:
+        # Dark mode by default
+        - scheme: slate
+          toggle:
+              icon: material/brightness-4
+              name: Passer en mode clair
+
+        # Alternate clear mode
+        - scheme: default
+          toggle:
+              icon: material/brightness-7
+              name: Passer en mode sombre
+
+    highlightjs: true
+    hljs_languages:
+        - c
+
+nav:
+    - Home: index.md
+    - API:
+          - Stack: stack.md
+          - Vector: vector.md
+    - Example:
+        - Stack: example/example_stack.md
+        - Vector: example/example_vector.md
+
+# set to false in prod
+use_directory_urls: true
+
+markdown_extensions:
+    - admonition
+    - pymdownx.superfences
+    - pymdownx.highlight
+    - pymdownx.details
+
+# mkdocs serve
+
+# mkdocs build

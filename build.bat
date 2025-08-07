@@ -10,6 +10,6 @@ echo Creating the build folder...
 mkdir build
 
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-cmake --build .
+cmake -G "MinGW Makefiles" ..
+cmake --build . --config Release
 cmake --install .

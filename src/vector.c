@@ -212,12 +212,16 @@ bool vector_reverse(vector_t* vec){
 
     size_t right_idx = vec->size - 1;
 
+    void * temp_buffer = malloc(vec->element_size);
+        
+    if (temp_buffer == NULL){
+        return false;
+    }
+
     while (left_idx < right_idx){
         
         void* left_ptr = (char*)vec->data + left_idx * vec->element_size;
         void* right_ptr = (char*)vec->data + right_idx * vec->element_size;
-
-        char temp_buffer[vec->element_size];
 
         memcpy(temp_buffer, left_ptr, vec->element_size);
         memcpy(left_ptr, right_ptr, vec->element_size);
@@ -229,6 +233,62 @@ bool vector_reverse(vector_t* vec){
 
     }
 
+    free(temp_buffer);
+
     return true;
 }
 
+bool vector_swap(vector_t* vec, size_t index_element_a, size_t index_element_b){
+
+    if (vec == NULL || vec->data == NULL){
+        return false;
+    }
+    
+    if (vec->size <= 1){
+        return false;
+    }
+
+    if (index_element_a > vec->size || index_element_b > vec->size){
+        return false;
+    }
+
+    void * a = vector_at(vec, index_element_a);
+    void * b = vector_at(vec, index_element_b);
+
+    if (a == NULL || b == NULL){
+        return false;
+    }
+
+    void * tmp = malloc(vec->element_size);
+
+    memcpy(tmp, a, vec->element_size);
+    memcpy(a, b, vec->element_size);
+    memcpy(b, tmp, vec->element_size);
+
+    free(tmp);
+
+    return true;
+}
+
+
+bool vector_check(vector_t* vec, const void* element){
+    
+    bool status = false;
+
+    if (vec == NULL || vec->data == NULL){
+        return false;
+    }
+
+    for (size_t i = 0; i < vec->size; i++){
+        
+        void * element_search = vector_at(vec, i);
+
+        if (memcmp(element_search, element, vec->element_size) == 0){
+            status = true;
+            break;
+        }
+
+    }
+        
+    return status;
+}

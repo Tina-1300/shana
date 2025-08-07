@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.10)
 
 
 set(PROJECT_NAME shana) # library name
-set(PROJECT_VERSION 0.1.0)
+set(PROJECT_VERSION 0.2.0)
 
 
 project(${PROJECT_NAME} VERSION ${PROJECT_VERSION} LANGUAGES C)

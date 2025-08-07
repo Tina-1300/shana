@@ -1,4 +1,7 @@
+
 #include <stdio.h>
+#include <assert.h>
+#include <conio.h>
 #include "shana/vector.h"
 
 // gcc -o test_vector.exe test_vector.c -lshana & color
@@ -10,6 +13,42 @@ void space(unsigned int count_space){
 }
 
 int main(){
+
+
+    vector_t vec_str;
+
+    vector_init(&vec_str, sizeof(char));
+
+    vector_push_back(&vec_str, &(char){'A'});
+    
+    vector_push_back(&vec_str, &(char){'l'});
+
+    vector_push_back(&vec_str, &(char){'e'});
+
+    vector_push_back(&vec_str, &(char){'x'});
+
+    if(vector_check(&vec_str, &(char){'e'}) == true){
+        printf("the character 'e' is in the vector");
+        space(1);
+    }
+
+
+
+    vector_swap(&vec_str, 0, 3);
+
+    for (size_t i = 0; i < vector_size(&vec_str); i++){
+        char val = *(char*)vector_at(&vec_str, i);
+        printf("%c", val);
+    }
+
+    vector_free(&vec_str);
+
+    space(1);
+    
+
+
+    
+
 
     vector_t vec;
 
@@ -39,6 +78,8 @@ int main(){
         printf("vec[%zu] = %d\n", i, *val);
     }
 
+    printf("vector capacity : %d", vector_capacity(&vec));
+
     printf("%d", *(int*)vector_front(&vec));
 
     space(1);
@@ -50,6 +91,9 @@ int main(){
 
     vector_free(&vec);
 
+    getch();
 
+
+    
     return 0;
 };

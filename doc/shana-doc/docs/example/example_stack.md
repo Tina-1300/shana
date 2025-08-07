@@ -1,7 +1,11 @@
-#include <stdio.h>
-#include "shana/stack.h"
+# Example - Stack
 
-// gcc -o test_stack.exe test_stack.c -lshana & color
+
+```c
+#include <stdio.h>
+#include <shana/stack.h>
+
+// gcc -o example_stack.exe example_stack.c -lshana & color
 
 int main(){
 
@@ -37,9 +41,7 @@ int main(){
 
 
     while (!stack_is_empty(&stack)){
-        
         printf("Top = %d\n", *(int*)stack_top(&stack));
-
         stack_pop(&stack);
     }
 
@@ -48,3 +50,4 @@ int main(){
 
     return 0;
 }
+```

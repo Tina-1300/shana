@@ -292,3 +292,78 @@ bool vector_check(vector_t* vec, const void* element){
         
     return status;
 }
+
+
+void vector_resize(vector_t* vec, size_t new_size){
+    
+    if (!vec){
+        return;
+    }
+
+    void * new_data = realloc(vec->data, new_size * vec->element_size);
+
+    if (!new_data && new_size > 0 ){
+        return;
+    }
+
+    if (new_size > vec->size){
+        size_t extra_bytes = (new_size - vec->size) * vec->element_size;
+        memset((char*)new_data + vec->size * vec->element_size, 0, extra_bytes);
+    }
+
+    vec->data = new_data;
+    vec->size = new_size;
+}
+
+
+vector_t vector_slice(const vector_t* src, size_t start, size_t end){
+
+    if (start > src->size){
+        start = src->size;
+    }
+
+    if (end > src->size) {
+        end = src->size;
+    }
+
+    if (start > end){
+        start = end;
+    }
+
+    size_t new_size = end - start;
+
+
+    vector_t slice;
+    vector_init(&slice, src->element_size);
+    vector_resize(&slice, new_size);
+
+
+    for (size_t i = 0; i < new_size; i++){
+        memcpy((char*)slice.data + i * src->element_size, (char*)src->data + (start + i) * src->element_size, src->element_size);
+    }
+    
+    return slice;
+}
+
+
+unsigned int vector_count(vector_t* vec, const void* element){
+
+    int increment = 0;
+
+    if (vec == NULL || vec->data == NULL){
+        return false;
+    }
+
+    for (size_t i = 0; i < vec->size; i++){
+        
+        void * element_search = vector_at(vec, i);
+
+        if (memcmp(element_search, element, vec->element_size) == 0){
+            increment += 1;
+            
+        }
+
+    }
+        
+    return increment;
+}

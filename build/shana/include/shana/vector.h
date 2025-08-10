@@ -70,7 +70,7 @@ void vector_resize(vector_t* vec, size_t new_size); // done
  
 vector_t vector_slice(const vector_t* src, size_t start, size_t end); // done
 
-unsigned int vector_count(vector_t* vec, const void* element); // done
+unsigned int vector_count(vector_t* vec, const void* element); 
 
 
 bool vector_merged(vector_t* dest, size_t count, ...); // todo  (variadique)

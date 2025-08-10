@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libshana.a CMakeFiles/shana.dir/src/vector.c.obj CMakeFiles/shana.dir/src/stack.c.obj
+C:\mingw64\bin\ranlib.exe libshana.a

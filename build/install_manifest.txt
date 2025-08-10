@@ -1,0 +1,3 @@
+C:/Users/Tina/Desktop/shana/build/shana/include/shana/stack.h
+C:/Users/Tina/Desktop/shana/build/shana/include/shana/vector.h
+C:/Users/Tina/Desktop/shana/build/shana/lib/libshana.a

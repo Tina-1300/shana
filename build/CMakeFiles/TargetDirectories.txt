@@ -1,0 +1,17 @@
+C:/Users/Tina/Desktop/shana/build/CMakeFiles/shana.dir
+C:/Users/Tina/Desktop/shana/build/CMakeFiles/test.dir
+C:/Users/Tina/Desktop/shana/build/CMakeFiles/edit_cache.dir
+C:/Users/Tina/Desktop/shana/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Tina/Desktop/shana/build/CMakeFiles/list_install_components.dir
+C:/Users/Tina/Desktop/shana/build/CMakeFiles/install.dir
+C:/Users/Tina/Desktop/shana/build/CMakeFiles/install/local.dir
+C:/Users/Tina/Desktop/shana/build/CMakeFiles/install/strip.dir
+C:/Users/Tina/Desktop/shana/build/tests/CMakeFiles/test_vector.dir
+C:/Users/Tina/Desktop/shana/build/tests/CMakeFiles/test_stack.dir
+C:/Users/Tina/Desktop/shana/build/tests/CMakeFiles/test.dir
+C:/Users/Tina/Desktop/shana/build/tests/CMakeFiles/edit_cache.dir
+C:/Users/Tina/Desktop/shana/build/tests/CMakeFiles/rebuild_cache.dir
+C:/Users/Tina/Desktop/shana/build/tests/CMakeFiles/list_install_components.dir
+C:/Users/Tina/Desktop/shana/build/tests/CMakeFiles/install.dir
+C:/Users/Tina/Desktop/shana/build/tests/CMakeFiles/install/local.dir
+C:/Users/Tina/Desktop/shana/build/tests/CMakeFiles/install/strip.dir

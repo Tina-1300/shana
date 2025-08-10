@@ -14,7 +14,7 @@ void space(unsigned int count_space){
 
 int main(){
 
-
+    /*
     vector_t vec_str;
 
     vector_init(&vec_str, sizeof(char));
@@ -44,15 +44,14 @@ int main(){
     vector_free(&vec_str);
 
     space(1);
-    
+    */
 
-
-    
-
-
+    /*
     vector_t vec;
+    vector_t part;
 
     vector_init(&vec, sizeof(int));
+    vector_init(&part, sizeof(int));
 
     for (int i = 0; i < 10; ++i){
         vector_push_back(&vec, &i);
@@ -63,6 +62,9 @@ int main(){
     vector_pop_front(&vec); // there will be 7 left
 
     vector_pop_at(&vec, 2); // there will be 6 left 
+
+    part = vector_slice(&vec, 0, 3);
+    
 
     //vector_pop_at(&vec, 7);
 
@@ -78,6 +80,11 @@ int main(){
         printf("vec[%zu] = %d\n", i, *val);
     }
 
+    for (size_t i = 0; i < vector_size(&part); ++i){
+        int* val = (int*)vector_at(&part, i);
+        printf("part[%zu] = %d\n", i, *val);
+    }
+
     printf("vector capacity : %d", vector_capacity(&vec));
 
     printf("%d", *(int*)vector_front(&vec));
@@ -90,10 +97,36 @@ int main(){
     space(1);
 
     vector_free(&vec);
+    vector_free(&part);
 
     getch();
 
+    */
+    
+
+
+    vector_t vec;
+
+    vector_init(&vec, sizeof(int));
+
+    for (int i = 0; i < 10; ++i){
+
+        vector_push_back(&vec, &i);
+        vector_push_back(&vec, &i);
+        vector_push_back(&vec, &i);
+
+    }
 
     
+    for (size_t i = 0; i < vector_size(&vec); ++i){
+        int* val = (int*)vector_at(&vec, i);
+        printf("vec[%zu] = %d\n", i, *val);
+    }
+
+    space(2);
+
+    unsigned int nb_element = vector_count(&vec, &(int){4});
+    printf("le nombre %d est present %d fois", 4, nb_element); // le nombre 4 est present 3 fois
+
     return 0;
 };

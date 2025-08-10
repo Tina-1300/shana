@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Tina/Desktop/shana/build/cmake_install.cmake",
+		"C:/Users/Tina/Desktop/shana/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
